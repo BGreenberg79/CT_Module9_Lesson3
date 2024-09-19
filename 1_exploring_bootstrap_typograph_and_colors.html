@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Forms and Lists</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Form, lists and tables Page">
+    <meta name="keywords" content="forms, lists, tables">
+    <meta name="author" content="Benjamin Greenberg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<!-- JSDelivr bootstrap link -->
+</head>
+<body>
+    <header>
+            <div class="container-fluid">    
+                <nav class="navbar navbar-expand-sm navbar-white bg-success fixed-top">
+                    <button 
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    class="navbar-toggler"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                    >Sections</button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active"><a class="nav-link text-white">Home</a></li>
+                            <li class="nav-item active"><a class="nav-link text-white">About</a></li>
+                            <li class="nav-item active"><a class="nav-link text-white">Services</a></li>
+                            <li class="nav-item active"><a class="nav-link text-white">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+    </header>
+    <main>
+        <section id="feedback">
+        <div class="container-fluid bg-light text-center mt-5">
+            <h2 class="h4 mt-5 my-2 text-warning">User Registration Form</h2>
+            <!-- Task 1.1 Typography to headings and paragraphs as seen in this header as well as the enuing forms, tables, and preceding navbar -->
+        </div>
+        <div class="container-fluid">
+            <form action="/feedback" method="post">
+                <fieldset class="border border-danger form-group bg-info">
+                    <!-- Task 1.4 Bootsrap background color experimentation -->
+                    <legend class="fs-5 success-text-emphasis text-center">Registrant Information</legend>
+                    <!-- Task 1.3 Bootstrap emphasis class and text-centering -->
+                    <div class="grid">
+                        <div class="row">
+                            <div class="col-sm-6 col-12">
+                                <label for="first-name" class="form-label mx-2 fs-6 fst-italic text-danger-emphasis">First Name:</label>
+                                <input type="text" id="first-name" name="first-name" class="mb-2 fs-6 form-control" aria-label="First Name" placeholder="John" required>
+                            </div>
+                            <div class="col-sm-6 col-12">
+                                <label for="last-name" class="form-label mx-2 fs-6 fst-italic text-danger-emphasis">Last Name:</label>
+                                <input type="text" id="last-name" class="mb-2 fs-6 form-control" name="last-name" aria-label="Last Name" placeholder="Doe" required>
+                            </div> 
+                        </div>
+                    </div>
+                        <label for="email" class="form-label mx-2 fs-6 fst-italic text-danger-emphasis">Email Address:</label>
+                        <input type="email" class="mb-2 fs-6 form-control " id="email" name="email" aria-label="Email Address" placeholder="abc123@gmail.com" required>
+                    <div role="alert" aria-live="assertive" id="error-message" class="fs-6 text-muted">Please be sure to fill out all fields!</div>
+                <!-- ARIA assertion for accessibility ensuring compatability with screen reader and that all fields are filled out -->
+                    <div class="text-center"><input type="submit" value="Submit" aria-label="Submit" class="btn btn-success text-white my-2"></div>
+                    <!-- Task 1.2 Use bootstrap class to style submit button  -->
+                <!-- Buttons for submission -->
+                </fieldset>
+            </form>
+        </div>
+        </section>
+        <section>
+            <h2 class="h4 mt-2 my-2 text-warning text-center">Fantasy Football Receiving Top 5</h2>
+            <div class="table-responsive">
+                <table class="table table-hover table-striped table-danger">
+                    <!-- Task 1.5 Responsive table with alternating row colors-->
+                    <tr>
+                            <th class="text-center fs-6 fst-italic text-info-emphasis">Rank</th>
+                            <th class="text-center fs-6 fst-italic text-info-emphasis">Player Name</th>
+                            <th class="text-center fs-6 fst-italic text-info-emphasis">2023 Fantasy Football Points</th>
+                    </tr>
+                    <tr>
+                        <td class="text-center fs-6 text-warning-emphasis">1</td>
+                        <td class="text-center fs-6 text-warning-emphasis">CeeDee Lamb</td>
+                        <td class="text-center fs-6 text-warning-emphasis">270</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center fs-6 text-warning-emphasis">2</td>
+                        <td class="text-center fs-6 text-warning-emphasis">Tyreek Hill</td>
+                        <td class="text-center fs-6 text-warning-emphasis">260</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center fs-6 text-warning-emphasis">3</td>
+                        <td class="text-center fs-6 text-warning-emphasis">Amon-Ra St. Brown</td>
+                        <td class="text-center fs-6 text-warning-emphasis">214</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center fs-6 text-warning-emphasis">4</td>
+                        <td class="text-center fs-6 text-warning-emphasis">Mike Evans</td>
+                        <td class="text-center fs-6 text-warning-emphasis">204</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center fs-6 text-warning-emphasis">5</td>
+                        <td class="text-center fs-6 text-warning-emphasis">Puka Nacua</td>
+                        <td class="text-center fs-6 text-warning-emphasis">194</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<!-- JSdelivr script -->
+</body>
+</html>
